@@ -1,0 +1,199 @@
+type: collection.insomnia.rest/5.0
+name: Lexamica
+meta:
+  id: wrk_86cc869a77854621b73f07123eab1b44
+  created: 1752582802361
+  modified: 1752582827215
+  description: ""
+collection:
+  - url: http://localhost:3000/api/products
+    name: Products
+    meta:
+      id: req_b983abd3642e40faa1adedbe444dc7df
+      created: 1752582802422
+      modified: 1752618000581
+      isPrivate: false
+      description: ""
+      sortKey: -1752582802422
+    method: GET
+    parameters:
+      - name: page
+        value: "2"
+        id: pair_c1f425650702402880c4e1aa40fb8b6b
+      - name: limit
+        value: "1"
+        id: pair_69c31e8b11514b758f6555d9717e6f0a
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/health
+    name: Health
+    meta:
+      id: req_77adc1ba58e44d4bb61d0e9b734ec556
+      created: 1752591231863
+      modified: 1752591249273
+      isPrivate: false
+      description: ""
+      sortKey: -1752591231863
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/products
+    name: Products
+    meta:
+      id: req_6b338e09ce9b4f57be9d307d2ec59f71
+      created: 1752592224602
+      modified: 1752617508171
+      isPrivate: false
+      description: ""
+      sortKey: -1752582802372
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Rayban Wayfarer",
+          "sku": "SKU12345",
+          "quantity": 100,
+          "customFields": {
+            "color": "red",
+            "size": "M",
+            "category": "apparel"
+          }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/webhook/product-created
+    name: Product Created Webhook
+    meta:
+      id: req_dee348ae89b64fbd9972fb1af40493f4
+      created: 1752618870470
+      modified: 1752675997526
+      isPrivate: false
+      description: ""
+      sortKey: -1752582802322
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Widget",
+          "sku": "WGT-001",
+          "quantity": 100,
+          "customFields": {
+            "color": "red",
+            "size": "medium"
+          }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/webhook/product-paid
+    name: Product Paid Webhook
+    meta:
+      id: req_e158bad2e0c14d7e94dab8b30e4ea52e
+      created: 1752676270283
+      modified: 1752676317768
+      isPrivate: false
+      description: ""
+      sortKey: -1752582802272
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Widget",
+          "sku": "WGT-001",
+          "quantity": 100,
+          "customFields": {
+            "color": "red",
+            "size": "medium",
+            "paymentId": "PAY-123456",
+            "paidAt": "2024-06-01T12:34:56Z"
+          }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://mock-third-party:4000/paid-products
+    name: Mocked Third Party Paid Products
+    meta:
+      id: req_94c0c15e6ae3499bb335a411d51da32d
+      created: 1752763591039
+      modified: 1752766776478
+      isPrivate: false
+      description: ""
+      sortKey: -1752582802172
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9770a4bccf998c2be8966e9d8d04d121818b8c96
+    created: 1752582802365
+    modified: 1752582802365
+environments:
+  name: Base Environment
+  meta:
+    id: env_9770a4bccf998c2be8966e9d8d04d121818b8c96
+    created: 1752582802364
+    modified: 1752582802364
+    isPrivate: false
