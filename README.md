@@ -47,7 +47,7 @@ You can deploy the entire system (app, MongoDB, Redis, and mock third-party serv
 
 ## API Testing with Insomnia
 
-You can import the included [Insomnia collection](./insomnia_collection.yaml) to quickly test all API endpoints.
+You can import the included [Insomnia collection](./docs/insomnia_collection.yaml) to quickly test all API endpoints.
 
 **How to use:**
 1. Download or clone this repository.
